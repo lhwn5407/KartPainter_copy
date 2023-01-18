@@ -1,0 +1,31 @@
+# Background / Circles
+Rectangle, White, 0, 0, 150, 100, 0
+Circle, Indigo 350, 0, 0, 50, 50, 0
+Semicircle, Red 450, 36.5, 52, 50, 50, 35
+Circle, Red 450, -51.5, 35, 25, 25, 0
+Circle, Indigo 350, 51.5, -35, 25, 25, 0
+
+# Top Left Stripes
+Rectangle, Black, -164, 109, 4, 25, 34
+Rectangle, Black, -190, 126, 4, 25, 34
+Rectangle, Black, -216, 143, 4, 25, 34
+
+# Top Right Stripes
+Rectangle, Black, 164, 109, -4, 25, -34
+Rectangle, Black, 216, 143, -4, 25, -34
+Rectangle, White, 190, 125, 20, 2, -34
+Rectangle, Black, 190, 126, -4, 25, -34
+
+# Bottom Left Stripes
+Rectangle, Black, -190, -125.5, -4, 25, -34
+Rectangle, White, -190, -126.5, 20, 2, -34
+Rectangle, Black, 216, -142.5, -4, 25, -34
+Rectangle, Black, 216, -142.5, -4, 25, -34
+Rectangle, Black, -164, -108.5, -4, 25, -34
+Rectangle, Black, -164, -108.5, -4, 25, -34
+
+# Bottom Right Stripes
+Rectangle, Black, 216, -142.5, 4, 25, 34
+Rectangle, Black, 164, -108.5, 4, 25, 34
+Rectangle, Black, 190, -125.5, 4, 25, 34
+Rectangle, Black, 190, -126.5, -20, 2, 34

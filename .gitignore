@@ -1,0 +1,10 @@
+# Visual Studio
+.vs/
+enc_temp_folder/
+packages/
+*.aps
+*.user
+
+# Project output
+bin/
+obj/

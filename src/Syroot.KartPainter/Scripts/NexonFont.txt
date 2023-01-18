@@ -1,0 +1,33 @@
+N
+Square, Black, -604.4, -22.58, 10, 30, 0
+Square, Black, -526.58, 0.26, 9, 40, -55.50
+Square, Black, -445.47, 20.66, 10, 30, 0
+Right Triangle, Black, -580.32, 64.98, 20, 15, 0
+Right Triangle, Black, -470.9, -64.67, 20, 15, 180
+
+# E
+Square, Black, -338.57, -0.26, 10, 38, 0
+Square, Black, -245.42, 75, 30, 8, 0
+Square, Black, -245.42, 0.8, 30, 8, 0
+Square, Black, -245.42, -73.19, 30, 9, 0
+
+# X
+Square, Black, -6.19, -0.19, 9, 44, 43.30
+Square, Black, -6.16, -0.19, 9, 44, -43.30
+Triangle, Black, -95.66, 78.81, 13, -7, 0
+Triangle, Black, 83.34, 78.81, 13, -7, 0
+Triangle, Black, -95.66, -79.19, 13, 7, 0
+Triangle, Black, 83.34, -79.19, 13, 7, 0
+
+# O
+Square, Black, 181.27, -0.26, 10, 38, 0
+Square, Black, 343.45, -0.26, 10, 38, 0
+Square, Black, 274.41, 72, 30, 9, 0
+Square, Black, 274.41, -73.19, 30, 9, 0
+
+# N
+Square, Black, 453.09, -22.32, 10, 30, 0
+Square, Black, 530.82, 0.53, 9, 40, -55.50
+Square, Black, 611.93, 20.93, 10, 30, 0
+Right Triangle, Black, 477.09, 65.24, 20, 15, 0
+Right Triangle, Black, 587.07, -64.41, 20, 15, 180
