@@ -1,29 +1,29 @@
-# Background / Circles
+# Taegeuk
 Square, White, 0, 0, 150, 100, 0
 Circle, Indigo 350, 0, 0, 50, 50, 0
 Semicircle, Red 450, 36.5, 52, 50, 50, 35
 Circle, Red 450, -51.5, 35, 25, 25, 0
 Circle, Indigo 350, 51.5, -35, 25, 25, 0
 
-# Top Left Stripes
+# Top Left Trigram
 Square, Black, -164, 109, 4, 25, 34
 Square, Black, -190, 126, 4, 25, 34
 Square, Black, -216, 143, 4, 25, 34
 
-# Top Right Stripes
+# Top Right Trigram
 Square, Black, 164, 109, -4, 25, -34
 Square, Black, 216, 143, -4, 25, -34
 Square, White, 190, 125, 20, 2, -34
 Square, Black, 190, 126, -4, 25, -34
 
-# Bottom Left Stripes
-Square, Black, -190, -125.5, -4, 25, -34
-Square, White, -190, -126.5, 20, 2, -34
-Square, Black, -164, -108.5, -4, 25, -34
-Square, Black, -216, -142.5, -4, 25, -34
+# Bottom Left Trigram
+Square, Black, -190, -126, -4, 25, -34
+Square, White, -190, -125, 20, 2, -34
+Square, Black, -164, -109, -4, 25, -34
+Square, Black, -216, -143, -4, 25, -34
 
-# Bottom Right Stripes
-Square, Black, 216, -142.5, 4, 25, 34
-Square, Black, 164, -108.5, 4, 25, 34
-Square, Black, 190, -125.5, 4, 25, 34
-Square, White, 190, -126.5, -20, 2, 34
+# Bottom Right Trigram
+Square, Black, 216, -143, 4, 25, 34
+Square, Black, 164, -109, 4, 25, 34
+Square, Black, 190, -126, 4, 25, 34
+Square, White, 190, -125, -20, 2, 34
