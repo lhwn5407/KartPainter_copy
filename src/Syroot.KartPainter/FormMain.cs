@@ -50,13 +50,20 @@ public partial class FormMain : Form
     private void FormMain_Load(object sender, EventArgs e)
     {
         // Configure script list.
-        void addScriptDirectory(string name) => _cbImportScript.Items
-            .AddRange(Directory.EnumerateFiles(Path.Combine(Environment.CurrentDirectory, name), "*.txt")
-            .Select(x => Path.Combine(name, Path.GetFileNameWithoutExtension(x)))
-            .ToArray());
+        void addScriptDirectory(string name)
+        {
+            string path = Path.Combine(Environment.CurrentDirectory, name);
+            if (!Directory.Exists(path))
+                return;
+            _cbImportScript.Items
+                .AddRange(Directory.EnumerateFiles(path, "*.txt")
+                .Select(x => Path.Combine(name, Path.GetFileNameWithoutExtension(x)))
+                .ToArray());
+        }
         addScriptDirectory(String.Empty);
         addScriptDirectory("Scripts");
-        _cbImportScript.SelectedIndex = 0;
+        if (_cbImportScript.Items.Count > 0)
+            _cbImportScript.SelectedIndex = 0;
 
         // Configure forced color.
         _cbImportColor.Items.Add("None");
