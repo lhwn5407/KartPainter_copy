@@ -1,15 +1,28 @@
 # Nexon Logo
 
+# Each line describes the properties of one decal to place.
+# Properties are separated by , and must be the following:
+# - Shape name as in English translation, case-insensitive
+# - Color name as in English translation, case-insensitive
+# - X position, decimal
+# - Y position, decimal
+# - Width, integer
+# - Height, integer
+# - Rotation, decimal
+# Decimal parts can be ignored if not needed.
+# Whitespace and anything after a # is ignored.
+# Lines that cannot be parsed are skipped.
+
 # Inner Background
-Right Triangle, Light Blue 700,  -82.68,  306.81, -51,  25,  0.00
-Square,         Light Blue 700,  -82.68,  126.78,  51,  47,  0.00
+Right Triangle, Light Blue 700,  -82.68,  306.81, -51,  25,  0
+Square,         Light Blue 700,  -82.68,  126.78,  51,  47,  0
 
 # Outer Ground
-Right Triangle, Light Green 250, -84.69,  -55.68, -51,  27,  0.00
-Triangle,       Light Green 250, 209.71,  -65.23,  32,  82, 90.00
-Right Triangle, Light Green 250, -46.68, -162.59, -66, -16,  0.00
-Right Triangle, Light Green 250, 252.38, -134.52,  54, -28,  0.00
+Right Triangle, Light Green 250, -84.69,  -55.68, -51,  27,  0
+Triangle,       Light Green 250, 209.71,  -65.23,  32,  82, 90
+Right Triangle, Light Green 250, -46.68, -162.59, -66, -16,  0
+Right Triangle, Light Green 250, 252.38, -134.52,  54, -28,  0
 
 # Inner Ground
-Right Triangle, Blue 300,        -82.68,   39.52,  51,  11,  0.00
-Right Triangle, Blue 300,        -82.68,  -55.09,  51, -27,  0.00
+Right Triangle, Blue 300,        -82.68,   39.52,  51,  11,  0
+Right Triangle, Blue 300,        -82.68,  -55.09,  51, -27,  0
