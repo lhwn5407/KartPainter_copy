@@ -150,7 +150,7 @@ public partial class FormMain : Form
             try
             {
                 await script.ImportAsync(_input, new Progress<int>(x => Invoke(()
-                    => _btImportRun.Text = $"Cancel import ({x:000} of {script.Slots.Count:000})...")),
+                    => _btImportRun.Text = $"Cancel import ({x:000} of {script.Slots.Count - 1:000})...")),
                     _scriptCts.Token);
             }
             catch (OperationCanceledException) { }

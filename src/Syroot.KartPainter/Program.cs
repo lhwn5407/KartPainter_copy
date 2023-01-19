@@ -27,7 +27,7 @@ namespace Syroot.KartPainter
                     Console.Error.WriteLine($"Ignoring line {error}");
 
                 await script.ImportAsync(input, new Progress<int>(x
-                    => Console.WriteLine($"Importing slot {x:000} from {script.Slots.Count:000}...")));
+                    => Console.WriteLine($"Importing slot {x:000} of {script.Slots.Count - 1:000}...")));
             }
             else
             {
