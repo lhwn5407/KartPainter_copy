@@ -1,0 +1,20 @@
+# Left
+Right Triangle, Black, -164, 0, -16, 51, 0
+Right Triangle, Black, -84, 0, 16, -51, 0
+
+# Center
+Right Triangle, Light Blue 350, -62, 0, -5, 17, 0
+Square, Light Blue 350, -22, 0, 11, 17, 0
+Right Triangle, Light Blue 350, 18, 0, 5, -17, 0
+
+# Top Right
+Right Triangle, Light Blue 350, 43, 85, -5, 17, 0
+Square, Light Blue 350, 83, 85, 11, 17, 0
+Right Triangle, Light Blue 350, 123, 85, 5, -17, 0
+Right Triangle, Light Blue 350, 120, 85, 17, -17, 0
+
+# Bottom Right
+Right Triangle, Black, -6.5, -85, -5, 17, 0
+Square, Black, 33.5, -85, 11, 17, 0
+Right Triangle, Black, 73.5, -85, 5, -17, 0
+Right Triangle, Black, 58, -85, 12, 17, 0
