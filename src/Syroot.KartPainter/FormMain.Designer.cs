@@ -92,7 +92,7 @@
             this._lblSettingsDelay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._lblSettingsDelay.AutoSize = true;
-            this._lblSettingsDelay.Location = new System.Drawing.Point(11, 8);
+            this._lblSettingsDelay.Location = new System.Drawing.Point(8, 8);
             this._lblSettingsDelay.Margin = new System.Windows.Forms.Padding(8, 8, 8, 4);
             this._lblSettingsDelay.Name = "_lblSettingsDelay";
             this._lblSettingsDelay.Size = new System.Drawing.Size(85, 15);
@@ -248,10 +248,11 @@
             this.ClientSize = new System.Drawing.Size(234, 245);
             this.Controls.Add(this._tcMain);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(64000, 284);
+            this.MinimumSize = new System.Drawing.Size(250, 284);
             this.Name = "FormMain";
             this.Padding = new System.Windows.Forms.Padding(8);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
