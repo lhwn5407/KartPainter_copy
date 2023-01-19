@@ -1,3 +1,6 @@
+using System.Globalization;
+using System.Text;
+
 namespace Syroot.KartPainter
 {
     internal static class Program
@@ -10,6 +13,10 @@ namespace Syroot.KartPainter
         [STAThread]
         private static async Task<int> Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.Unicode;
+            CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
+            CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
+
             if (args.Length == 1)
             {
                 nuint hWnd = Utils.FindGameWindow();
