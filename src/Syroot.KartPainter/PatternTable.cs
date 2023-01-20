@@ -10,7 +10,7 @@ public static class PatternTable
 
     private static readonly string[] _names =
     {
-        "Hexagon", "Semicircle", "Crescent Moon", "Circle", "Square", "Triangle", "Right Triangle", "Curve 1", "Curve2",
+        "Hexagon", "Semicircle", "Crescent Moon", "Circle", "Square", "Triangle", "Right Triangle", "Curve 1", "Curve 2",
         "Curve 3", "Curve 4", "Flare 1", "Flare 2", "Flare 3", "Flare 4", "Letter A", "Letter B", "Letter C",
         "Letter D", "Letter E", "Letter F", "Letter G", "Letter H", "Letter I", "Letter J", "Letter K", "Letter ",
 
