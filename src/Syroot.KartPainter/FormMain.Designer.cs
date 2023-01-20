@@ -44,9 +44,9 @@
             this._tpExport = new System.Windows.Forms.TabPage();
             this._lblExportStep1 = new System.Windows.Forms.Label();
             this._tpSettings = new System.Windows.Forms.TabPage();
-            this._tGameWindow = new System.Windows.Forms.Timer(this.components);
-            this._lblSettingsDelayRandom = new System.Windows.Forms.Label();
             this._nudSettingsDelayRandom = new System.Windows.Forms.NumericUpDown();
+            this._lblSettingsDelayRandom = new System.Windows.Forms.Label();
+            this._tGameWindow = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this._nudSettingsDelay)).BeginInit();
             this._tcMain.SuspendLayout();
             this._tpImport.SuspendLayout();
@@ -153,6 +153,7 @@
             this._cbImportScript.Name = "_cbImportScript";
             this._cbImportScript.Size = new System.Drawing.Size(179, 23);
             this._cbImportScript.TabIndex = 2;
+            this._cbImportScript.DropDown += new System.EventHandler(this._cbImportScript_DropDown);
             this._cbImportScript.SelectedIndexChanged += new System.EventHandler(this._cbImportScript_SelectedIndexChanged);
             // 
             // _cbImportColor
@@ -240,24 +241,6 @@
             this._tpSettings.Text = "Settings";
             this._tpSettings.UseVisualStyleBackColor = true;
             // 
-            // _tGameWindow
-            // 
-            this._tGameWindow.Enabled = true;
-            this._tGameWindow.Interval = 1000;
-            this._tGameWindow.Tick += new System.EventHandler(this._tGameWindow_Tick);
-            // 
-            // _lblSettingsDelayRandom
-            // 
-            this._lblSettingsDelayRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._lblSettingsDelayRandom.AutoSize = true;
-            this._lblSettingsDelayRandom.Location = new System.Drawing.Point(8, 58);
-            this._lblSettingsDelayRandom.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
-            this._lblSettingsDelayRandom.Name = "_lblSettingsDelayRandom";
-            this._lblSettingsDelayRandom.Size = new System.Drawing.Size(191, 15);
-            this._lblSettingsDelayRandom.TabIndex = 2;
-            this._lblSettingsDelayRandom.Text = "Additional Random Key Delay (ms)";
-            // 
             // _nudSettingsDelayRandom
             // 
             this._nudSettingsDelayRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -279,6 +262,24 @@
             this._nudSettingsDelayRandom.TabIndex = 3;
             this._nudSettingsDelayRandom.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this._nudSettingsDelayRandom.ValueChanged += new System.EventHandler(this._nudSettingsDelayRandom_ValueChanged);
+            // 
+            // _lblSettingsDelayRandom
+            // 
+            this._lblSettingsDelayRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblSettingsDelayRandom.AutoSize = true;
+            this._lblSettingsDelayRandom.Location = new System.Drawing.Point(8, 58);
+            this._lblSettingsDelayRandom.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this._lblSettingsDelayRandom.Name = "_lblSettingsDelayRandom";
+            this._lblSettingsDelayRandom.Size = new System.Drawing.Size(191, 15);
+            this._lblSettingsDelayRandom.TabIndex = 2;
+            this._lblSettingsDelayRandom.Text = "Additional Random Key Delay (ms)";
+            // 
+            // _tGameWindow
+            // 
+            this._tGameWindow.Enabled = true;
+            this._tGameWindow.Interval = 1000;
+            this._tGameWindow.Tick += new System.EventHandler(this._tGameWindow_Tick);
             // 
             // FormMain
             // 

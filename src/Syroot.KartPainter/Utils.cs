@@ -9,7 +9,7 @@ public static class Utils
         return PInvoke.FindWindow("UnrealWindow", "KartDrift  ");
     }
 
-    public static bool IsToken(this string a, string b)
+    public static bool IsToken(this string a, string? b)
     {
         return String.Equals(a, b, StringComparison.OrdinalIgnoreCase);
     }

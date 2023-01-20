@@ -22,6 +22,31 @@ public partial class FormMain : Form
 
     // ---- METHODS (PRIVATE) ------------------------------------------------------------------------------------------
 
+    private void UpdateScriptList()
+    {
+        string? prevScriptName = _scriptName;
+        _cbImportScript.Items.Clear();
+        _scriptName = null;
+
+        // Configure script list.
+        static IEnumerable<string> getScripts(string? directory = null)
+        {
+            string path = Path.Combine(Environment.CurrentDirectory, directory ?? String.Empty);
+            return Directory.Exists(path)
+                ? Directory.EnumerateFiles(path, "*.txt")
+                    .Select(x => Path.Combine(directory, Path.GetFileNameWithoutExtension(x)))
+                : Enumerable.Empty<string>();
+        }
+
+        string[] scriptNames = getScripts().Concat(getScripts("Scripts")).ToArray();
+        if (scriptNames.Length > 0)
+        {
+            _cbImportScript.Items.AddRange(scriptNames);
+            _cbImportScript.SelectedIndex = Math.Max(0, Array.FindIndex(scriptNames, x => x.IsToken(prevScriptName)));
+            _scriptName = scriptNames[_cbImportScript.SelectedIndex];
+        }
+    }
+
     private void ValidateScriptRun()
     {
         if (!_scriptImporting)
@@ -50,20 +75,7 @@ public partial class FormMain : Form
     private void FormMain_Load(object sender, EventArgs e)
     {
         // Configure script list.
-        void addScriptDirectory(string name)
-        {
-            string path = Path.Combine(Environment.CurrentDirectory, name);
-            if (!Directory.Exists(path))
-                return;
-            _cbImportScript.Items
-                .AddRange(Directory.EnumerateFiles(path, "*.txt")
-                .Select(x => Path.Combine(name, Path.GetFileNameWithoutExtension(x)))
-                .ToArray());
-        }
-        addScriptDirectory(String.Empty);
-        addScriptDirectory("Scripts");
-        if (_cbImportScript.Items.Count > 0)
-            _cbImportScript.SelectedIndex = 0;
+        UpdateScriptList();
 
         // Configure forced color.
         _cbImportColor.Items.Add("None");
@@ -76,6 +88,12 @@ public partial class FormMain : Form
         // Configure key delay.
         _nudSettingsDelay.Value = _input.KeyDelay;
         _nudSettingsDelayRandom.Value = _input.KeyDelayRandom;
+    }
+
+    private void _cbImportScript_DropDown(object sender, EventArgs e)
+    {
+        UpdateScriptList();
+        ValidateScriptRun();
     }
 
     private void _cbImportScript_SelectedIndexChanged(object sender, EventArgs e)
