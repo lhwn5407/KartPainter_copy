@@ -45,11 +45,14 @@
             this._lblExportStep1 = new System.Windows.Forms.Label();
             this._tpSettings = new System.Windows.Forms.TabPage();
             this._tGameWindow = new System.Windows.Forms.Timer(this.components);
+            this._lblSettingsDelayRandom = new System.Windows.Forms.Label();
+            this._nudSettingsDelayRandom = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this._nudSettingsDelay)).BeginInit();
             this._tcMain.SuspendLayout();
             this._tpImport.SuspendLayout();
             this._tpExport.SuspendLayout();
             this._tpSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._nudSettingsDelayRandom)).BeginInit();
             this.SuspendLayout();
             // 
             // _btImportRun
@@ -75,7 +78,7 @@
             0,
             0});
             this._nudSettingsDelay.Location = new System.Drawing.Point(11, 27);
-            this._nudSettingsDelay.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
+            this._nudSettingsDelay.Margin = new System.Windows.Forms.Padding(8, 0, 8, 4);
             this._nudSettingsDelay.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -95,9 +98,9 @@
             this._lblSettingsDelay.Location = new System.Drawing.Point(8, 8);
             this._lblSettingsDelay.Margin = new System.Windows.Forms.Padding(8, 8, 8, 4);
             this._lblSettingsDelay.Name = "_lblSettingsDelay";
-            this._lblSettingsDelay.Size = new System.Drawing.Size(85, 15);
+            this._lblSettingsDelay.Size = new System.Drawing.Size(132, 15);
             this._lblSettingsDelay.TabIndex = 0;
-            this._lblSettingsDelay.Text = "Key Delay (ms)";
+            this._lblSettingsDelay.Text = "Minimal Key Delay (ms)";
             // 
             // _lblImportStep1
             // 
@@ -225,7 +228,9 @@
             // 
             // _tpSettings
             // 
+            this._tpSettings.Controls.Add(this._nudSettingsDelayRandom);
             this._tpSettings.Controls.Add(this._nudSettingsDelay);
+            this._tpSettings.Controls.Add(this._lblSettingsDelayRandom);
             this._tpSettings.Controls.Add(this._lblSettingsDelay);
             this._tpSettings.Location = new System.Drawing.Point(4, 24);
             this._tpSettings.Name = "_tpSettings";
@@ -240,6 +245,40 @@
             this._tGameWindow.Enabled = true;
             this._tGameWindow.Interval = 1000;
             this._tGameWindow.Tick += new System.EventHandler(this._tGameWindow_Tick);
+            // 
+            // _lblSettingsDelayRandom
+            // 
+            this._lblSettingsDelayRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblSettingsDelayRandom.AutoSize = true;
+            this._lblSettingsDelayRandom.Location = new System.Drawing.Point(8, 58);
+            this._lblSettingsDelayRandom.Margin = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this._lblSettingsDelayRandom.Name = "_lblSettingsDelayRandom";
+            this._lblSettingsDelayRandom.Size = new System.Drawing.Size(191, 15);
+            this._lblSettingsDelayRandom.TabIndex = 2;
+            this._lblSettingsDelayRandom.Text = "Additional Random Key Delay (ms)";
+            // 
+            // _nudSettingsDelayRandom
+            // 
+            this._nudSettingsDelayRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._nudSettingsDelayRandom.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this._nudSettingsDelayRandom.Location = new System.Drawing.Point(11, 77);
+            this._nudSettingsDelayRandom.Margin = new System.Windows.Forms.Padding(8, 0, 8, 8);
+            this._nudSettingsDelayRandom.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this._nudSettingsDelayRandom.Name = "_nudSettingsDelayRandom";
+            this._nudSettingsDelayRandom.Size = new System.Drawing.Size(188, 23);
+            this._nudSettingsDelayRandom.TabIndex = 3;
+            this._nudSettingsDelayRandom.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this._nudSettingsDelayRandom.ValueChanged += new System.EventHandler(this._nudSettingsDelayRandom_ValueChanged);
             // 
             // FormMain
             // 
@@ -267,6 +306,7 @@
             this._tpExport.PerformLayout();
             this._tpSettings.ResumeLayout(false);
             this._tpSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._nudSettingsDelayRandom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,5 +327,7 @@
         private ComboBox _cbImportScript;
         private System.Windows.Forms.Timer _tGameWindow;
         private Label _lblImportStep3;
+        private NumericUpDown _nudSettingsDelayRandom;
+        private Label _lblSettingsDelayRandom;
     }
 }

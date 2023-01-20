@@ -7,24 +7,30 @@ public class InputSimulator
     private const nint _flagsExtended = 1 << 24;
     private const nint _flagsRelease = 1 << 30 | 1 << 31;
 
+    // ---- FIELDS -----------------------------------------------------------------------------------------------------
+
+    private static readonly Random _random = new();
+
     // ---- PROPERTIES -------------------------------------------------------------------------------------------------
 
     public nuint HWnd { get; set; }
 
     public int KeyDelay { get; set; } = 30;
 
+    public int KeyDelayRandom { get; set; }
+
     // ---- METHODS (PUBLIC) -------------------------------------------------------------------------------------------
 
     public async Task Hold(Key key, CancellationToken ct)
     {
         PInvoke.SendMessage(HWnd, PInvoke.WM_KEYDOWN, (nuint)key, _flagsExtended);
-        await Task.Delay(KeyDelay, ct);
+        await Task.Delay(GetDelay(), ct);
     }
 
     public async Task Release(Key key, CancellationToken ct)
     {
         PInvoke.SendMessage(HWnd, PInvoke.WM_KEYUP, (nuint)key, _flagsRelease);
-        await Task.Delay(KeyDelay, ct);
+        await Task.Delay(GetDelay(), ct);
     }
 
     public async Task Send(Key key, CancellationToken ct)
@@ -48,8 +54,15 @@ public class InputSimulator
         {
             ct.ThrowIfCancellationRequested();
             PInvoke.SendMessage(HWnd, PInvoke.WM_CHAR, c, 0);
-            await Task.Delay(KeyDelay, ct);
+            await Task.Delay(GetDelay(), ct);
         }
+    }
+
+    // ---- METHODS (PRIVATE) ------------------------------------------------------------------------------------------
+
+    private int GetDelay()
+    {
+        return KeyDelay + _random.Next(0, KeyDelayRandom);
     }
 }
 

@@ -75,6 +75,7 @@ public partial class FormMain : Form
 
         // Configure key delay.
         _nudSettingsDelay.Value = _input.KeyDelay;
+        _nudSettingsDelayRandom.Value = _input.KeyDelayRandom;
     }
 
     private void _cbImportScript_SelectedIndexChanged(object sender, EventArgs e)
@@ -162,6 +163,11 @@ public partial class FormMain : Form
     private void _nudSettingsDelay_ValueChanged(object sender, EventArgs e)
     {
         _input.KeyDelay = (int)_nudSettingsDelay.Value;
+    }
+
+    private void _nudSettingsDelayRandom_ValueChanged(object sender, EventArgs e)
+    {
+        _input.KeyDelayRandom = (int)_nudSettingsDelayRandom.Value;
     }
 
     private void _tGameWindow_Tick(object sender, EventArgs e)
