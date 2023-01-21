@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text;
 
 namespace Syroot.KartPainter;
@@ -75,6 +76,9 @@ public partial class FormMain : Form
 
     private void FormMain_Load(object sender, EventArgs e)
     {
+        AssemblyName assemblyName = Assembly.GetExecutingAssembly().GetName();
+        Text = $"{assemblyName.Name} {assemblyName.Version.ToString(3)}";
+
         // Configure script list.
         UpdateScriptList();
 
@@ -86,9 +90,10 @@ public partial class FormMain : Form
         // Configure run button.
         ValidateScriptRun();
 
-        // Configure key delay.
+        // Configure settings.
         _nudSettingsDelay.Value = _input.KeyDelay;
         _nudSettingsDelayRandom.Value = _input.KeyDelayRandom;
+        _cbSettingTopmost.Checked = TopMost;
     }
 
     private void _cbImportScript_DropDown(object sender, EventArgs e)
@@ -187,6 +192,11 @@ public partial class FormMain : Form
     private void _nudSettingsDelayRandom_ValueChanged(object sender, EventArgs e)
     {
         _input.KeyDelayRandom = (int)_nudSettingsDelayRandom.Value;
+    }
+
+    private void _cbSettingTopmost_CheckedChanged(object sender, EventArgs e)
+    {
+        TopMost = _cbSettingTopmost.Checked;
     }
 
     private void _tGameWindow_Tick(object sender, EventArgs e)
