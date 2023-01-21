@@ -31,7 +31,8 @@ public partial class FormMain : Form
         // Configure script list.
         static IEnumerable<string> getScripts(string? directory = null)
         {
-            string path = Path.Combine(Environment.CurrentDirectory, directory ?? String.Empty);
+            directory ??= String.Empty;
+            string path = Path.Combine(Environment.CurrentDirectory, directory);
             return Directory.Exists(path)
                 ? Directory.EnumerateFiles(path, "*.txt")
                     .Select(x => Path.Combine(directory, Path.GetFileNameWithoutExtension(x)))
