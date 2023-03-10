@@ -1,6 +1,7 @@
 # 복사본
 
 github actions를 이용한 컴파일용입니다.
+[원본링크](https://gitlab.com/Syroot/KartPainter)
 
 # KartPainter
 
