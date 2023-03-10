@@ -14,7 +14,7 @@ jobs:
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
 
     - name: Build
-      run: msbuild /m /p:Platform=x86 /p:Configuration=Release Syroot.KartPainter.sln
+      run: msbuild /m /p:Platform="Any CPU" /p:Configuration=Release Syroot.KartPainter.sln
         
     - name: Upload Binaries
       uses: actions/upload-artifact@v3
