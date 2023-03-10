@@ -1,3 +1,7 @@
+# 복사본
+
+github actions를 이용한 컴파일용입니다.
+
 # KartPainter
 
 [The most ridiculous attempt to make sharing decals _slightly_ easier.](https://www.youtube.com/watch?v=tgYhuaACxwg)
